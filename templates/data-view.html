@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data View</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ✅ Include Navbar -->
+{% include 'navbar.html' %}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Data View</h2>
+    
+    <!-- ✅ Data Table -->
+    <table class="table table-bordered table-striped" id="data-table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Commodity</th>
+                <th>Variety</th>
+                <th>Grade</th>
+                <th>Min Price</th>
+                <th>Max Price</th>
+                <th>Modal Price</th>
+                <th>Arrival Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row.Commodity }}</td>
+                <td>{{ row.Variety }}</td>
+                <td>{{ row.Grade }}</td>
+                <td>{{ row['Min Price'] }}</td>
+                <td>{{ row['Max Price'] }}</td>
+                <td>{{ row['Modal Price'] }}</td>
+                <td>{{ row['Arrival_Date'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- ✅ Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

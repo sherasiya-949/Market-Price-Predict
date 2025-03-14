@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Commodity Predictor</title>
+    
+    <!-- ✅ Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('/static/images/image1.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+        }
+        .container {
+            margin-top: 5rem;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background with opacity */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            color: #17a2b8;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ✅ Include Navbar -->
+{% include 'navbar.html' %}
+
+<div class="container">
+    <!-- ✅ Project Title -->
+    <h2>About Commodity Price Predictor</h2>
+    
+    <!-- ✅ Project Objective -->
+    <p>
+        The <strong>Commodity Price Predictor</strong> is designed to assist farmers and traders in making informed decisions 
+        about commodity prices by predicting the modal price based on historical data. This project leverages 
+        machine learning techniques to provide accurate and real-time predictions.
+    </p>
+</div>
+
+<!-- ✅ Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

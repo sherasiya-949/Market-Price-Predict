@@ -1,0 +1,4 @@
+# requirements.txt - Dependencies
+flask
+numpy
+pandas
