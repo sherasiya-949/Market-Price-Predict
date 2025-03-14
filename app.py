@@ -105,6 +105,7 @@
 from flask import Flask, request, jsonify, render_template
 import pandas as pd
 import numpy as np
+import os
 
 app = Flask(__name__)
 
@@ -212,5 +213,8 @@ def contact():
 
     return render_template('contact.html')
 
-if __name__ == '__main__':
-    app.run(debug=True, use_reloader=False)
+# if __name__ == '__main__':
+#     app.run(debug=True, use_reloader=False)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Use port from environment if available
+    app.run(host="0.0.0.0", port=port)
