@@ -31,7 +31,15 @@
             margin-bottom: 20px;
             font-weight: bold;
         }
-        p {
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        p, li {
             line-height: 1.6;
         }
     </style>
@@ -51,6 +59,70 @@
         about commodity prices by predicting the modal price based on historical data. This project leverages 
         machine learning techniques to provide accurate and real-time predictions.
     </p>
+    
+    <!-- ✅ Project Goals -->
+    <h4>📌 Project Goals:</h4>
+    <ul>
+        <li>Provide farmers and traders with a reliable tool to predict commodity prices.</li>
+        <li>Analyze historical data to identify trends and patterns.</li>
+        <li>Enhance decision-making using real-time machine learning-based insights.</li>
+        <li>Create a user-friendly web interface for easy access to data and predictions.</li>
+    </ul>
+    
+    <!-- ✅ Technologies Used -->
+    <h4>🛠️ Technologies Used:</h4>
+    <ul>
+        <li><strong>Backend:</strong> Flask (Python)</li>
+        <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap</li>
+        <li><strong>Machine Learning:</strong> Custom Linear Regression Model (Without Scikit-Learn)</li>
+        <li><strong>Data Handling:</strong> Pandas and Numpy</li>
+        <li><strong>Data Source:</strong> CSV file with historical commodity price data</li>
+    </ul>
+    
+    <!-- ✅ How It Works -->
+    <h4>⚙️ How It Works:</h4>
+    <ol>
+        <li>User selects <strong>State → District → Market</strong> from dropdown menus.</li>
+        <li>The app fetches real-time data using Flask routes and displays it in a table.</li>
+        <li>User provides minimum and maximum prices for a commodity.</li>
+        <li>The app trains a Linear Regression model using historical data.</li>
+        <li>Prediction is displayed on the screen based on the user’s input.</li>
+    </ol>
+    
+    <!-- ✅ Key Features -->
+    <h4>🚀 Key Features:</h4>
+    <ul>
+        <li>Dynamic dropdowns for state, district, market, and commodity.</li>
+        <li>Real-time data fetching from CSV.</li>
+        <li>Prediction using a custom linear regression model.</li>
+        <li>Bootstrap-based responsive user interface.</li>
+        <li>Error handling and data validation for consistency.</li>
+    </ul>
+    
+    <!-- ✅ Challenges Faced -->
+    <h4>🚧 Challenges Faced:</h4>
+    <ul>
+        <li>Handling missing data and invalid values in the dataset.</li>
+        <li>Creating a custom Linear Regression model without external libraries.</li>
+        <li>Optimizing the prediction model for accuracy.</li>
+        <li>Ensuring fast response time while handling large CSV files.</li>
+    </ul>
+    
+    <!-- ✅ Future Scope -->
+    <h4>🌟 Future Scope:</h4>
+    <ul>
+        <li>Adding more advanced models like Decision Trees and Random Forests.</li>
+        <li>Integrating real-time data from government sources.</li>
+        <li>Providing predictive insights using time-series analysis.</li>
+        <li>Mobile app integration for broader accessibility.</li>
+    </ul>
+    
+    <!-- ✅ Project Completion Status -->
+    <h4>📈 Project Status:</h4>
+    <p>The project is currently <strong>90% complete</strong>, with successful model training and prediction. 
+    Further improvements are planned to enhance model accuracy and user experience.</p>
+    
+    <br>
 </div>
 
 <!-- ✅ Bootstrap JS -->

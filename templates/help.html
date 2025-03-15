@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Commodity Price Predictor</title>
+    
+    <!-- ✅ Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('/static/images/image1.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+        }
+        .container {
+            margin-top: 5rem;
+            background-color: rgba(0, 0, 0, 0.7); /* Transparent dark background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            color: #17a2b8;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        ol, ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .btn-home {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            background-color: #17a2b8;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+            transition: background 0.3s ease;
+            text-decoration: none;
+        }
+        .btn-home:hover {
+            background-color: #138496;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ✅ Include Navbar -->
+{% include 'navbar.html' %}
+
+<div class="container">
+    <!-- ✅ Title -->
+    <h2>How to Use Commodity Price Predictor</h2>
+    
+    <!-- ✅ Step-by-Step Instructions -->
+    <ol>
+        <li>
+            <strong>Open the Home Page:</strong>  
+            Navigate to the home page by clicking on <a href="/" class="text-info">Home</a> in the navigation bar.
+        </li>
+        
+        <li>
+            <strong>Select State:</strong>  
+            From the dropdown list, select the **State** where the market is located.
+        </li>
+        
+        <li>
+            <strong>Select District:</strong>  
+            After selecting the state, a list of available districts will be shown. Select the correct district.
+        </li>
+        
+        <li>
+            <strong>Select Market:</strong>  
+            After selecting the district, the list of available markets will appear. Choose the correct market.
+        </li>
+        
+        <li>
+            <strong>Fetch Data:</strong>  
+            Click on the **"Get Data"** button. The table will display the available commodities, varieties, and prices.
+        </li>
+        
+        <li>
+            <strong>Select Commodity:</strong>  
+            After data is loaded, select the **Commodity** for which you want to predict the modal price.
+        </li>
+        
+        <li>
+            <strong>Enter Min & Max Prices:</strong>  
+            Enter the **Minimum Price** and **Maximum Price** values in the input fields.
+        </li>
+        
+        <li>
+            <strong>Predict Modal Price:</strong>  
+            Click on **"Predict Price"** button. The predicted modal price will be displayed below the form.
+        </li>
+        
+        <li>
+            <strong>Check Predictions:</strong>  
+            The predicted price is calculated using a custom **Linear Regression Model** based on historical data.
+        </li>
+        
+        <li>
+            <strong>Additional Options:</strong>  
+            - You can navigate to the **About Page** to know more about the project.  
+            - Use the **Contact Page** if you face any issues or need support.  
+        </li>
+    </ol>
+
+    <!-- ✅ Additional Notes -->
+    <h4>🚨 Notes:</h4>
+    <ul>
+        <li>Ensure that the CSV file is loaded correctly.</li>
+        <li>If you see a prediction error, check the selected market and commodity.</li>
+        <li>Contact support if the page is not loading or showing incorrect data.</li>
+    </ul>
+    
+    <!-- ✅ Home Button -->
+    <a href="/" class="btn-home">Go to Home Page</a>
+</div>
+
+<!-- ✅ Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

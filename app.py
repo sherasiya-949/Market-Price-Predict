@@ -102,7 +102,7 @@
 #     app.run(debug=True)
 
 
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, send_file
 import pandas as pd
 import numpy as np
 import os
@@ -202,6 +202,12 @@ def data_view():
     data = df[['Commodity', 'Variety', 'Grade', 'Min Price', 'Max Price', 'Modal Price', 'Arrival_Date']].to_dict(orient='records')
     return render_template('data-view.html', data=data)
 
+# ✅ Route to Download CSV
+@app.route('/download-dataset')
+def download_dataset():
+    file_path = "Price_Agriculture_commodities_Week.csv"
+    return send_file(file_path, as_attachment=True)
+
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
@@ -212,6 +218,10 @@ def contact():
         return jsonify({'message': 'Thank you for your message!'})
 
     return render_template('contact.html')
+
+@app.route('/help')
+def help():
+    return render_template('help.html')
 
 # if __name__ == '__main__':
 #     app.run(debug=True, use_reloader=False)
